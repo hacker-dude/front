@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            display: flex;
+        }
+        .col-left, .col-right {
+            flex: 1;
+            min-height: 400px;
+            min-width: 200px;
+        }
+        div{
+            border-radius: 6px;
+            border-style:hidden;
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 400px;width: 600px;">
+        <div class="row">
+            <div class="col-left" style="display: flex;align-items: stretch;flex-direction: column;">
+                <div style="flex-grow: 2;background-color: purple;">
+
+                </div>
+                <div style="flex-grow: 2;display: flex;">
+                    <div style="background-color: green; flex: 1;"></div>
+                    <div style="flex: 1;display: flex;flex-direction: column;">
+                        <div style="flex-grow: 2;background-color:dodgerblue "></div>
+                        <div style="flex-grow: 8;background-color:crimson "></div>
+                    </div>
+                </div>
+                <div style="flex-grow: 1;background-color: green;">
+                </div>
+            </div>
+            <div class="col-right" style="display: flex;align-items: stretch;flex-direction: column;">
+                    <div style="display: flex;flex: 4;">
+                        <div style="background-color: green;flex: 1;"></div>
+                        <div style="flex: 1;display: flex;flex-direction: column;">
+                            <div style="flex-grow: 2;background-color: dodgerblue"></div>
+                            <div style="flex-grow: 8;background-color: crimson"></div>
+                        </div>
+                    </div>
+                    <div style="background-color: purple;display: flex;flex: 2;"></div>
+            </div>
+          </div>
+    </div>
+    
+</body>
+</html>

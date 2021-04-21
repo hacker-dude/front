@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divM{
+            margin: 1px;
+        }
+        .divM2{
+            margin: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:400px;width:600px;display: flex;flex-direction: column;">
+        <div style="background-color: dodgerblue;flex: 3;"><p style="padding-left: 10px;padding-top: 5px;">.header</p></div>
+        <div style="flex: 14;justify-content: center;align-items: center;display: flex;flex-direction: column;">
+            <div style="flex: 1;height: 100px;width: 300px;display: flex;flex-direction: column;" class="divM">
+                <div style="flex: 3;display: flex;">
+                    <div style="flex: 8; background-color: green;"class="divM2"><p>.main-content</p></div>
+                    <div style="flex: 5; background-color: pink"class="divM2"><p>.sidebar</p></div>
+                </div>
+                <div style="flex: 2;display: flex;">
+                    <div style="flex: 1; background-color: orange"class="divM2"><p>.twin</p></div>
+                    <div style="flex: 1; background-color: orange"class="divM2"><p>.twin</p></div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: dodgerblue;flex: 2;"><p style="padding-left: 10px;">.footer</p></div>
+    </div>
+    
+</body>
+</html>

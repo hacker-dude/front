@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        function func1(n){
+            document.write(Math.ceil(n));
+        }
+        func1(2.6)
+
+        function func2(n){
+            document.write(Math.floor(n));
+        }
+        // func2(2.6);
+
+        function func3(n){
+            document.write(Math.round(n));
+        }
+        // func3(2.5);
+
+
+        function func4(n,inc=true){
+            if (inc){
+                document.write(Math.ceil(n))
+            }
+            else{
+                document.write(Math.floor(n))
+            }
+        }
+        //func4(2.5,false);
+
+        function func5(){
+            document.write(Math.random());
+        }
+        // func5();
+
+
+        function func6(){
+            document.write(Math.random() * (50 - 5) + 5);
+        }
+        // func6();
+
+        function func7(a,b){
+            document.write(Math.random() * (a - b) + b);
+        }
+        // func7(2,5);
+
+        function func8(a,b){
+            document.write(Math.floor((Math.random() * (b-a) + a)));
+        }
+        // func8(30,50)
+
+        function func9(a,b){
+                for(i=0;i<10;i++){
+                    document.writeln(Math.floor((Math.random() * (b-a) + a)));
+                }
+            }
+        // func9(30,50)
+
+        function func10(n,a,b){
+            for(i=0;i<n;i++){
+                document.writeln(Math.floor((Math.random() * (b-a) + a)));
+            }
+        }
+        // func10(20,30,50)
+
+
+        function func11() {
+            weekdays = ['mon','tue','wed','thur','fri','sat','sun'];
+            var index = Math.floor(Math.random() * weekdays.length);
+            document.write(weekdays[index]);
+
+        }
+        // func11()
+
+        function func12(){
+            images = ['tree','apple','book'];
+            document.write("<img style='width:100px;height:100px' src='${images[Math.floor(Math.random() * images.length)]}.jpg'>");
+        }
+        // func12();
+
+        // msgavsebia da sheidlzeba wina funqciebis gamodzaxebis kombinaciebit sheiqmnas  
+
+
+
+
+
+
+        function func20(wString){
+            return wString.length
+        }
+        document.write(func20("LOLOLOL"))
+
+        function func21(wString){
+            c=0
+            for(i=0;i<=wString.length;i++){
+                if (wString[i]=='a') c++
+            }
+            return c
+        }
+        document.write("<br>")
+        document.write(func21("LOLOLOL"))
+
+        function func24(length){
+            result = [];
+            characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            charactersLength = characters.length;
+            for ( var i = 0; i < length; i++ ) {
+                result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+            }
+            return result.join('');
+        }
+        document.write("<br>")
+        document.write(func24(40))
+        
+        function func26(length){
+            for(i=0;i<20;i++){
+                document.write(func24(length))
+                document.write(" ")
+            }
+        }
+        document.write("<br>")
+        //func26(4)
+
+        function func27(n,m,k){
+            x=Math.floor(Math.random()*100%m)
+            if (x<n)x+=n
+            for(i=0;i<k;i++){
+                document.write(func24(x))
+                document.write(" ")
+            }
+        }
+        document.write("<br>")
+        func27(1,3,4)
+
+    </script>
+</body>
+</html>

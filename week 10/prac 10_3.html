@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function caclulate(perc,month,amnt){
+            p=parseInt(perc)
+            m=parseInt(month)
+            a=parseInt(amnt)
+            document.getElementById('res').value = a + (a/100*perc)*m;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input placeholder="Percentage (%)" id="perc" type="number">
+        <input placeholder="Months" id="months" type="number">
+        <input placeholder="Amount" id="amount" type="number">
+        <br>
+        <br>
+        <button onclick="caclulate(perc.value,months.value,amount.value)">calculate</button>
+        <br>
+        <br>
+        <span>result:</span>
+        <input id="res" disabled>
+    </div>
+</body>
+</html>

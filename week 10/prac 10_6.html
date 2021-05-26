@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function generate(n,m){
+            div=document.getElementById("ans")
+            div.innerHTML=""
+            for(i=0;i<30;i++){
+                num=Math.floor((Math.random()*(m-n) + n))
+                div.innerHTML += num + "<br>"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input placeholder="start" id="start">
+        <input placeholder="end" id="end">
+        <button onclick="generate(start.value,end.value)">generate</button>
+        <div id="ans"></div>
+    </div>
+</body>
+</html>

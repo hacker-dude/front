@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 40px;
+            height: 20px;
+        }
+    </style>
+    <script>
+        days=["mon","tue","wed","thr","fri","sat","sun "]
+        
+        function fun(day){
+            text=document.getElementById("text")
+            text.value=days[day-1]
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div>
+            <span>კვირის დღე:</span>
+            <input type="text" id="text" disabled>
+        </div>
+        <div>
+            <br>
+            <button onclick="fun(this.value)" value="1">1</button>
+            <button onclick="fun(this.value)" value="2">2</button>
+            <button onclick="fun(this.value)" value="3">3</button>
+            <button onclick="fun(this.value)" value="4">4</button>
+            <button onclick="fun(this.value)" value="5">5</button>
+            <button onclick="fun(this.value)" value="6">6</button>
+            <button onclick="fun(this.value)" value="7">7</button>
+        </div> 
+    </div>
+</body>
+</html>

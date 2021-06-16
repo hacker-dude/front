@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dBorder{
+            border: 1px blue solid;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+        }
+        .center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+    <script>
+        document.onkeydown = detectKey;
+        function detectKey(e) {
+            var width = parseInt(document.getElementById('box').style.width);
+            var height = parseInt(document.getElementById('box').style.height);
+            e = e || window.event;
+            if (e.keyCode == '38') {
+                // up arrow
+                var box = document.getElementById('box')
+                if (height-50 >= 0){
+                    box.style.height  = (height-50)+"px";
+                    box.style.backgroundColor = "red";
+                }
+            }
+            else if (e.keyCode == '40') {
+                // down arrow
+                var box = document.getElementById('box')
+                if (height+50 <= 400){
+                    box.style.height  = (height+50)+"px";
+                    box.style.backgroundColor = "aqua";
+                }
+            }
+            else if (e.keyCode == '37') {
+            // left arrow
+                var box = document.getElementById('box')
+                if (width-50 >= 0){
+                    box.style.width  = (width-50)+"px";
+                    box.style.backgroundColor = "red";
+                }
+            }
+            else if (e.keyCode == '39') {
+            // right arrow
+                var box = document.getElementById('box')
+                if (width+50 <= 700){
+                    box.style.width  = (width+50)+"px";
+                    box.style.backgroundColor = "aqua";
+                }
+            }
+        }
+    </script>
+</head>
+<body class="center">
+    <div style="width: 700px;height: 400px; position: relative;" class="dBorder">
+        <div style="width: 50px;height: 50px;background-color: aqua; position: absolute; top: 0px; left: 0px;" id="box" onkeydown="anim(event)"></div>
+    </div> 
+</body>
+</html>

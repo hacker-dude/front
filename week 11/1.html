@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dBorder{
+            border: 1px blue solid;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+        }
+        .center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+    <script>
+
+        function move(id){
+            box = document.getElementById("box") 
+            switch(id){
+                case "1":
+                    box.style.top = (parseInt(box.style.top) + 30) + 'px';
+                    break;
+                case "2":
+                    box.style.top = (parseInt(box.style.top) - 30) + 'px';
+                    break;
+                case "3":
+                    box.style.left = (parseInt(box.style.left) + 30) + 'px';
+                    break;
+                case "4":
+                    box.style.left = (parseInt(box.style.left) - 30) + 'px';
+                    break;
+                case "5":
+                    box.style.top = (parseInt(box.style.top) + 30) + 'px';
+                    box.style.left = (parseInt(box.style.left) - 30) + 'px';
+                    break;
+                case "6":
+                    box.style.top = (parseInt(box.style.top) + 30) + 'px';
+                    box.style.left = (parseInt(box.style.left) + 30) + 'px';
+                    break;
+                case "7":
+                    box.style.top = (parseInt(box.style.top) - 30) + 'px';
+                    box.style.left = (parseInt(box.style.left) - 30) + 'px';
+                    break;
+                case "8":
+                    box.style.top = (parseInt(box.style.top) - 30) + 'px';
+                    box.style.left = (parseInt(box.style.left) + 30) + 'px';   
+                    break;
+            }
+        }
+    </script>
+</head>
+<body class="center">
+    <div style="width: 700px;height: 400px; position: relative;" class="dBorder">
+        <div style="width: 50px;height: 50px;background-color: aqua; position: absolute; top: 0px; left: 0px;" id="box"></div>
+    </div>
+    <div style="width: 400px;height: 100px;" class="dBorder" class="center">
+        <button id="1" onclick="move(this.id)">↓</button>
+        <button id="2" onclick="move(this.id)">↑</button>
+        <button id="3" onclick="move(this.id)">→</button>
+        <button id="4" onclick="move(this.id)">←</button>
+        <button id="5" onclick="move(this.id)">D L</button>
+        <button id="6" onclick="move(this.id)">D R</button>
+        <button id="7" onclick="move(this.id)">U L</button>
+        <button id="8" onclick="move(this.id)">U R</button>
+    </div>
+</body>
+</html>
